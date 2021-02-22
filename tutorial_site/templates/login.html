@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block pageContent %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>Titlee</title>
+    <link href="style.css" rel="stylesheet" type="style/css" />
+</head>
+
+
+<body>
+
+
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body style ="background-color:gray;">
+
+{% block body %}{% endblock %}
+</body>
+
+
+</html>
+
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.dropbtn {
+  background-color: gray;
+  color: white;
+  padding: 16px;
+  font-size: 40px;
+  border: none;
+  left: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: grey;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 20px 17px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: gray;}
+</style>
+</head>
+
+<body>
+<h1 style="color:white;font-family:verdana" >Create Account</h1>
+<form action="/login" method="post">
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+            </div>
+            <div class="login-form">
+                <div class="control-group">
+                    <input class="login-field" name="username" placeholder="username" type="text" value="">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+                <div class="control-group">
+                    <input class="login-field" name="password" placeholder="password" type="password" value="">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+		<div class="row" style="font:bold;">
+			<div class="col-1">
+				<input type="checkbox" id="1" name="1" value="ii">
+				<label for="1"> Class I</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="2" name="2" value="ii">
+				<label for="2"> Class II</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="3" name="3" value="ii">
+				<label for="3"> Class III</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="4" name="4" value="ii">
+				<label for="4"> Class IV</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="5" name="5" value="ii">
+				<label for="5"> Class V</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="6" name="6" value="ii">
+				<label for="6"> Class VI</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="7" name="7" value="ii">
+				<label for="7"> Class VII</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="8" name="8" value="ii">
+				<label for="8"> Class VIII</label>
+			</div>
+		</div>
+		<div class="col-1">
+			<input style= "color:white" class="btn btn-primary btn-large btn-block" type="submit" value="Submit">
+		  </div>         
+ 		</div>
+<div class="row" style="font:bold;">
+<div class="col-1">Student ID</div>
+<div class="col-3">Username</div>
+<div class="col-2">Password</div>
+<div class="col-2">Class code</div>
+</div>
+
+            {% for i in data %}
+		<div class="row">
+<div class="col-1">{{i[0]}}</div>
+<div class="col-3">{{i[1]}}</div>
+<div class="col-2">{{i[2]}}</div>
+<div class="col-2">{{i[3]}}</div>
+    			
+		</div>
+	    {% endfor %}
+        </div>
+    </div>
+</form>
+
+</body>
+{% endblock %}

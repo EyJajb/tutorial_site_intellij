@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+#--------------------------------
+#testing signup sheet
+#--------------------------------
+{% block head %}
+<title>{{name}}| test </title>
+{% endblock %}
+
+{% block title %}
+Hello <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<br>
+{% endblock %}
+
+
+{% block pageContent %}
+<form action="/login" method="post">
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+            </div>
+            <div class="login-form">
+                <div class="control-group">
+                    <input class="login-field" name="username" placeholder="username" type="text" value="">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+                <div class="control-group">
+                    <input class="login-field" name="password" placeholder="password" type="password" value="">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+		<div class="row" style="font:bold;">
+			<div class="col-1">
+				<input type="checkbox" id="1" name="1" value="ii">
+				<label for="1"> Class I</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="2" name="2" value="ii">
+				<label for="2"> Class II</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="3" name="3" value="ii">
+				<label for="3"> Class III</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="4" name="4" value="ii">
+				<label for="4"> Class IV</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="5" name="5" value="ii">
+				<label for="5"> Class V</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="6" name="6" value="ii">
+				<label for="6"> Class VI</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="7" name="7" value="ii">
+				<label for="7"> Class VII</label>
+			</div>
+			<div class="col-1">
+				<input type="checkbox" id="8" name="8" value="ii">
+				<label for="8"> Class VIII</label>
+			</div>
+		</div>
+	<div class="col-1">
+		<input style= "color:white" class="btn btn-primary btn-large btn-block" type="submit" value="Submit">
+	</div>         
+ </div>
+            
+    <b>Feedback Form  </b>  <br>
+    <form action="testing" method="post" style="margin: 35px; border: 2px solid darkblue; padding: 25px; background:powderblue">
+        Hows the website so far?
+        <select>
+            <option>It's good</option>
+            <option>I don't like it</option>
+        </select><br>
+        Name: <input type="text" name="name"><br>
+        E-mail: <input type="text" name="email"><br>
+        <hr size="20">
+        Test textarea <br>
+        <textarea cols="50" rows="5">You can edit this</textarea><br>
+        <b>List the classes you are planning to study</b><br>
+        <input type="checkbox" id="vehicle1" name="class 1" value="yes">
+        <label for="vehicle1"> class 1 </label><br>
+        <input type="checkbox" id="vehicle2" name="class 3" value="yes">
+        <label for="vehicle2"> class 2 </label><br>
+        <input type="checkbox" id="vehicle3" name="class 3" value="yes">
+        <label for="vehicle3"> class 3 </label><br>
+        <input type="submit">
+    </form>
+    {% endblock %}
